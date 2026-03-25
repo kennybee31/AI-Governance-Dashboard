@@ -1,8 +1,11 @@
+# 在 app.R 的最頂端加入這幾行
 library(shiny)
 library(ggplot2)
+library(munsell)   # 強制聲明：修復 ggplot2 載入錯誤
+library(colorspace) # 預防下一個潛在的依賴報錯
 library(dplyr)
 library(stringr)
-library(bslib) # 確保載入此套件提升質感
+library(bslib)
 
 # 1. 載入數據
 data_file <- "top_skills_final.rds" 
